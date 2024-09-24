@@ -15,3 +15,7 @@ function hidden(id) {
 
   document.getElementById(id).classList.remove("hidden");
 }
+
+document.getElementById("blog-id").addEventListener("click", function () {
+  window.location.href = "blog.html";
+});

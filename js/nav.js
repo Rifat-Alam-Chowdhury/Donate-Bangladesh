@@ -5,8 +5,13 @@ document.getElementById("Submit-btn").addEventListener("click", function () {
 
   const currentMainBalance = texts("main-balance");
 
-  if (isNaN(userInput)) {
+  if (isNaN(userInput) && userInput <= 0) {
     alert("Please input number");
+    my_modal_1.showModal();
+    return;
+  }
+  if (userInput <= 0) {
+    alert("INVALID NUMBER");
     my_modal_1.showModal();
     return;
   }
@@ -57,6 +62,10 @@ document.getElementById("donate-btn").addEventListener("click", function () {
   if (isNaN(userInput) || isNaN(donationBox)) {
     alert("ONLY NUMBERS");
     my_modal_2.showModal();
+    return;
+  }
+  if (userInput <= 0) {
+    alert("less");
     return;
   }
 

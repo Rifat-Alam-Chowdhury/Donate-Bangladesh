@@ -103,6 +103,11 @@ document.getElementById("donate-btn2").addEventListener("click", function () {
     my_modal_2.showModal();
     return;
   }
+  if (userInput <= 0) {
+    alert("INVALID NUMBER");
+    my_modal_1.showModal();
+    return;
+  }
 
   if (userInput > currentMainBalance) {
     my_modal_3.showModal();
@@ -135,6 +140,11 @@ document.getElementById("donate-btn3").addEventListener("click", function () {
   if (isNaN(userInput) || isNaN(donationBox)) {
     alert("ONLY NUMBERS");
     my_modal_2.showModal();
+    return;
+  }
+  if (userInput <= 0) {
+    alert("INVALID NUMBER");
+    my_modal_1.showModal();
     return;
   }
   if (userInput > currentMainBalance) {

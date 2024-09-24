@@ -34,7 +34,7 @@
       }
     </style>
   </head>
-  <body class="lexend">
+  <body class="lexend bg-gradient-to-r from-gray-300/50 to-red-400/90">
     <header
       class="sticky top-0 z-50 backdrop-blur-3xl backdrop-opacity-95 bg-gradient-to-r from-gray-300/50 to-red-400/90"
     >
@@ -43,7 +43,7 @@
         <!-- blog button -->
         <div>
           <button
-            class="btn bg-gradient-to-r from-red-300 to-cyan-400 text-sm text-indigo-50 font-extrabold lg:text-2xl lg:px-14"
+            class="btn bg-gradient-to-r from-red-300 to-cyan-400 text-sm text-pink-950 font-extrabold lg:text-2xl lg:px-14"
           >
             BLOG
           </button>
@@ -57,7 +57,9 @@
             src="./assets/logo.png"
             alt=""
           />
-          <a class="btn btn-ghost font-extrabold text-white text-lg lg:text-2xl"
+          <a
+            href="./index.html"
+            class="btn btn-ghost font-extrabold text-white text-lg lg:text-2xl"
             >Donate Bangladesh</a
           >
         </div>
@@ -102,10 +104,10 @@
       <!-- navbar ends -->
 
       <!-- hero -->
-      <section class="border-2">
-        <div class="flex justify-center mt-5 mb-5 space-x-5">
-          <button class="btn bg-cyan-300">Donation</button>
-          <button class="btn bg-yellow-200">History</button>
+      <section class="">
+        <div class="flex justify-center mt-5 mb-5 space-x-5 py-2">
+          <button id="Donation-btn" class="btn bg-cyan-300">Donation</button>
+          <button id="History-btn" class="btn bg-yellow-200">History</button>
         </div>
       </section>
 
@@ -113,6 +115,7 @@
       <section>
         <!-- Open the modal using ID.showModal() method -->
 
+        <!-- 1 -->
         <dialog id="my_modal_1" class="modal bg-black">
           <div
             class="modal-box flex flex-col justify-center items-center bg-gradient-to-r from-gray-300/50 to-red-400/90"
@@ -127,12 +130,212 @@
             </div>
           </div>
         </dialog>
+        <!-- 2 -->
+        <dialog id="my_modal_2" class="modal bg-black">
+          <div
+            class="modal-box flex flex-col justify-center items-center bg-gradient-to-r from-gray-300/50 to-red-400/90"
+          >
+            <p class="py-4 text-2xl">Please Enter Amount</p>
+            <i class="fa-regular fa-face-sad-cry text-2xl"></i>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline btn-secondary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+        <!-- 3 -->
+        <dialog id="my_modal_3" class="modal bg-black">
+          <div
+            class="modal-box flex flex-col justify-center items-center bg-gradient-to-r from-gray-300/50 to-red-400/90"
+          >
+            <p class="py-4 text-2xl flex ml-6 lg:text-center">
+              Insufficient Balance Please Cash In First
+            </p>
+            <i class="fa-regular fa-face-smile text-2xl"></i>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline btn-secondary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        <!-- 4 -->
+        <dialog id="my_modal_4" class="modal bg-black">
+          <div
+            class="modal-box flex flex-col justify-center items-center bg-gradient-to-r from-gray-300/50 to-red-400/90"
+          >
+            <h1 class="py-4 text-4xl flex ml-6 lg:text-center text-pink-950">
+              CONGRATS!!
+            </h1>
+            <img src="./assets/coin.png" alt="" />
+            <p>You Have Donated For Humankind</p>
+            <h1 class="font-extrabold text-pink-950 text-2xl mt-2">
+              SUCCESSFULLY
+            </h1>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline btn-secondary">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
       <!-- cash in modal -->
 
       <!-- hero ends-->
     </header>
 
+    <!-- cards -->
+    <main id="cards-section">
+      <!-- 1 -->
+      <div
+        class="hero w-full mx-auto bg-gradient-to-b from-yellow-300 to-pink-400 border-2 border-pink-300"
+      >
+        <div class="hero-content flex-col lg:flex-row">
+          <img src="./assets/noakhali.png" />
+          <div>
+            <div
+              class="flex space-x-3 items-center px-3 py-1 w-5/12 bg-gradient-to-r from-yellow-300 to-pink-500 rounded-xl"
+            >
+              <img src="./assets/coin.png" alt="" />
+              <p><span id="donation-box" class="text-2xl">0</span> BDT</p>
+            </div>
+            <h1 class="text-2xl font-extrabold lg:text-3xl">
+              Donate for Flood at Noakhali, Bangladesh
+            </h1>
+            <p class="py-6 font-light">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <input
+              class="px-16 py-3 rounded-xl"
+              type="text"
+              placeholder="Enter Amount"
+              id="donation-user-field"
+            />
+            <button
+              id="donate-btn"
+              class="btn bg-gradient-to-t from-cyan-300 to-yellow-300 mt-3 border-2 border-sky-400 ml-32 lg:mx-auto"
+            >
+              Donate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 1  ends-->
+
+      <!-- 2 -->
+      <div
+        class="hero w-full mx-auto bg-gradient-to-b from-pink-400 to-yellow-300 border-2 border-pink-300"
+      >
+        <div class="hero-content flex-col lg:flex-row">
+          <img src="./assets/feni.png" />
+          <div>
+            <div
+              class="flex space-x-3 items-center px-3 py-1 w-5/12 bg-gradient-to-r from-yellow-300 to-pink-500 rounded-xl"
+            >
+              <img src="./assets/coin.png" alt="" />
+              <p><span id="donation-box2" class="text-2xl">0</span> BDT</p>
+
+              <!-- <p><span class="text-2xl">0</span> BDT</p> -->
+            </div>
+            <h1 class="text-2xl font-extrabold lg:text-3xl">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h1>
+            <p class="py-6 font-light">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <input
+              class="px-16 py-3 rounded-xl"
+              type="text"
+              placeholder="Enter Amount"
+              name=""
+              id="donation-user-field2"
+            />
+            <button
+              id="donate-btn2"
+              class="btn bg-gradient-to-t from-cyan-300 to-yellow-300 mt-3 border-2 border-sky-400 ml-32 lg:mx-auto"
+            >
+              Donate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 2 ends -->
+
+      <!-- 3 -->
+      <div
+        class="hero w-full mx-auto bg-gradient-to-b from-yellow-300 to-pink-400 border-2 border-yellow-300"
+      >
+        <div class="hero-content flex-col lg:flex-row">
+          <img src="./assets/noakhali.png" />
+          <div>
+            <div
+              class="flex space-x-3 items-center px-3 py-1 w-5/12 bg-gradient-to-r from-yellow-300 to-pink-500 rounded-xl"
+            >
+              <img src="./assets/coin.png" alt="" />
+              <p><span id="donation-box3" class="text-2xl">0</span> BDT</p>
+            </div>
+            <h1 class="text-2xl font-extrabold lg:text-3xl">
+              Aid for Injured in the Quota Movement
+            </h1>
+            <p class="py-6 font-light">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <input
+              class="px-16 py-3 rounded-xl"
+              type="text"
+              placeholder="Enter Amount"
+              name=""
+              id="donation-user-field3"
+            />
+            <button
+              id="donate-btn3"
+              class="btn bg-gradient-to-t from-cyan-300 to-yellow-300 mt-3 border-2 border-sky-400 ml-32 lg:mx-auto"
+            >
+              Donate
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 3 ends -->
+    </main>
+    <!-- cards -->
+
+    <main>
+      <!-- History -->
+      <section
+        id="history-section"
+        class="hidden bg-gradient-to-r from-gray-300/50 to-red-400/90"
+      ></section>
+      <!-- History ends -->
+    </main>
+
+    <script src="./js/common.js"></script>
     <script src="./js/nav.js"></script>
   </body>
 </html>

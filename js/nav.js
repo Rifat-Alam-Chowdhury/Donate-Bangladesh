@@ -6,6 +6,7 @@ document.getElementById("Submit-btn").addEventListener("click", function () {
   const currentMainBalance = texts("main-balance");
 
   if (isNaN(userInput)) {
+    alert("Please input number");
     my_modal_1.showModal();
     return;
   }
@@ -33,11 +34,18 @@ document.getElementById("cash-outer").addEventListener("click", function () {
 document.getElementById("History-btn").addEventListener("click", function () {
   document.getElementById("history-section").classList.remove("hidden");
   document.getElementById("cards-section").classList.add("hidden");
+  document.getElementById("footer-id").classList.add("hidden");
+  document.getElementById("History-btn").classList.add("bg-yellow-200");
+  document.getElementById("Donation-btn").classList.remove("bg-cyan-300");
 });
 
 document.getElementById("Donation-btn").addEventListener("click", function () {
   document.getElementById("history-section").classList.add("hidden");
   document.getElementById("cards-section").classList.remove("hidden");
+  document.getElementById("footer-id").classList.remove("hidden");
+  document.getElementById("History-btn").classList.remove("bg-yellow-200");
+  document.getElementById("Donation-btn").classList.add("bg-cyan-300");
+  document.getElementById("History-btn").classList.remove("bg-yellow-200");
 });
 
 // card 1
@@ -47,6 +55,7 @@ document.getElementById("donate-btn").addEventListener("click", function () {
   const donationBox = texts("donation-box");
 
   if (isNaN(userInput) || isNaN(donationBox)) {
+    alert("ONLY NUMBERS");
     my_modal_2.showModal();
     return;
   }
@@ -81,6 +90,7 @@ document.getElementById("donate-btn2").addEventListener("click", function () {
   const donationBox = texts("donation-box2");
 
   if (isNaN(userInput) || isNaN(donationBox)) {
+    alert("ONLY NUMBERS");
     my_modal_2.showModal();
     return;
   }
@@ -114,10 +124,10 @@ document.getElementById("donate-btn3").addEventListener("click", function () {
   const donationBox = texts("donation-box3");
 
   if (isNaN(userInput) || isNaN(donationBox)) {
+    alert("ONLY NUMBERS");
     my_modal_2.showModal();
     return;
   }
-
   if (userInput > currentMainBalance) {
     my_modal_3.showModal();
     return;
